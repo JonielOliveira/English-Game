@@ -1,0 +1,21 @@
+{
+  "name": "englishgame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build",
+    "copy-html": "xcopy src\\*.html dist\\ /I /Y",
+    "copy-css": "xcopy src\\*.css dist\\ /I /Y",
+    "copy-assets": "xcopy src\\assets\\* dist\\assets\\ /E /I /Y",
+    "build:all": "npm run build && npm run copy-html && npm run copy-css && npm run copy-assets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

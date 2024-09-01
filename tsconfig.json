@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6", /*'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */
+    "module": "CommonJS", /*'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist/",
+    "moduleResolution": "node",
+    "noImplicitAny": false
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ],
+  "exclude": ["node_modules"],
+  "scripts": {
+    "prebuild": "tsc --build --clean",
+    "build": "tsc --build",
+    "copy-assets": "cp -r src/assets/* dist/assets",
+    "build:all": "npm run build && npm run copy-assets"
+  }
+}
